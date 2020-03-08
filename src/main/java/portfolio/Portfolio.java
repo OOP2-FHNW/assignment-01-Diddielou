@@ -28,7 +28,7 @@ public class Portfolio<T extends Investment> {
         T temp = null;
         for (T i : investments) { // go through ArrayList
 
-            if (i.getTitel() == titel) { // compare titles
+            if (i.getTitel().equals(titel)) { // compare titles
                 i.setCount(i.getCount() - amount); // if an equal title is found, count should go down
 
                 if (i.getCount() == 0) {
@@ -42,7 +42,7 @@ public class Portfolio<T extends Investment> {
     // getShare
     public T getShare(String titel){
         for (T i : investments) { // go through ArrayList
-            if (i.getTitel() == titel) { // compare titles
+            if (i.getTitel().equals(titel)) { // compare titles
                 return i;
             }
         }
